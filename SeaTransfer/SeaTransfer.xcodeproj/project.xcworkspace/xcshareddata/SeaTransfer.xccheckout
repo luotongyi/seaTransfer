@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F7945E5E-0F79-499E-8A91-34E6C86E3058</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SeaTransfer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>77FF136E-50D1-4E16-8C36-320219712CB8</key>
+		<string>https://github.com/luotongyi/seaTransfer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SeaTransfer/SeaTransfer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>77FF136E-50D1-4E16-8C36-320219712CB8</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/luotongyi/seaTransfer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>77FF136E-50D1-4E16-8C36-320219712CB8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>77FF136E-50D1-4E16-8C36-320219712CB8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>seaTransfer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
