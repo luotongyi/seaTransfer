@@ -52,5 +52,7 @@
     
     UILabel *label1,*label2,*label3,*label4;
     UIButton *btn1,*btn2,*btn3,*btn4;
+    
+    NSInteger upImageBtnTag;
 }
 @end

@@ -296,14 +296,14 @@
     
     UILabel *timeInfo = [[UILabel alloc] initWithFrame:CGRectMake(10, lInfo.frame.size.height + lInfo.frame.origin.y + 20, 70, 30)];
     timeInfo.text = @"离港时间";
-    timeInfo.textColor = HEXCOLOR(0x2F92A0);
+    timeInfo.textColor = [UIColor blackColor];
 //    timeInfo.backgroundColor = HEXCOLOR(0xDDD8D9);
-    [timeInfo setFont:[UIFont boldSystemFontOfSize:17.0]];
+    [timeInfo setFont:[UIFont systemFontOfSize:11]];
     [scroll addSubview:timeInfo];
     [timeInfo release];
     
-    time = [[UITextField alloc] initWithFrame:CGRectMake(82,lInfo.frame.size.height + lInfo.frame.origin.y + 20, 230, 30)];
-    time.font = [UIFont systemFontOfSize:17.0f];
+    time = [[UITextField alloc] initWithFrame:CGRectMake(72,lInfo.frame.size.height + lInfo.frame.origin.y + 20, 240, 30)];
+    time.font = [UIFont systemFontOfSize:11];
     time.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     time.layer.borderWidth = 1.0f;
 //    time.backgroundColor = HEXCOLOR(0xDDD8D9);
@@ -322,7 +322,7 @@
     [remarkInfo release];
     
     remark = [[UITextField alloc] initWithFrame:CGRectMake(82,timeInfo.frame.size.height + timeInfo.frame.origin.y + 20, 230, 30)];
-    remark.font = [UIFont systemFontOfSize:17.0f];
+    remark.font = [UIFont systemFontOfSize:11.0f];
     remark.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     remark.layer.borderWidth = 1.0f;
     remark.backgroundColor = HEXCOLOR(0xDDD8D9);
@@ -1324,6 +1324,7 @@
 
 - (void)upLoadImagesWithArray:(UIButton *)btn
 {
+    upImageBtnTag = btn.tag;
     switch (btn.tag) {
         case 5000://iArray
         {
@@ -1413,6 +1414,62 @@
         return ;
     }
     allCount++;
+    switch (upImageBtnTag) {
+        case 5000:
+        {
+            [iArray removeAllObjects];
+            for (int i =finishCount-1; i<finishCount; i++)
+            {
+                UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5+55*i, 5, 50, 50)];
+                img.backgroundColor = [UIColor blackColor];
+                img.userInteractionEnabled = YES;
+                img.alpha = 0.5;
+                [imgScroller addSubview:img];
+            }
+        }
+            break;
+        case 5001:
+        {
+            [iArray1 removeAllObjects];
+            for (int i =finishCount-1; i<finishCount; i++)
+            {
+                UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5+55*i, 5, 50, 50)];
+                img.backgroundColor = [UIColor blackColor];
+                img.userInteractionEnabled = YES;
+                img.alpha = 0.5;
+                [emptyImgScroller addSubview:img];
+            }
+        }
+            break;
+        case 5002:
+        {
+            [iArray2 removeAllObjects];
+            for (int i =finishCount-1; i<finishCount; i++)
+            {
+                UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5+55*i, 5, 50, 50)];
+                img.backgroundColor = [UIColor blackColor];
+                img.userInteractionEnabled = YES;
+                img.alpha = 0.5;
+                [loadImgScroller addSubview:img];
+            }
+        }
+            break;
+        case 5003:
+        {
+            [iArray3 removeAllObjects];
+            for (int i =finishCount-1; i<finishCount; i++)
+            {
+                UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5+55*i, 5, 50, 50)];
+                img.backgroundColor = [UIColor blackColor];
+                img.userInteractionEnabled = YES;
+                img.alpha = 0.5;
+                [finishImgScroller addSubview:img];
+            }
+        }
+            break;
+        default:
+            break;
+    }
     
     switch (selectTags) {
         case 5000:
@@ -1441,7 +1498,7 @@
     HUD.progress = ((float)finishCount)/uploadArray.count;
     [self upLoadImageWithSort];
     if (finishCount == [uploadArray count] && errorCount > 0) {
-//        alertMessage(@"有图片上传失败。");
+        alertMessage(@"图片上传失败。");
     }
 }
 
