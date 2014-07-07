@@ -386,17 +386,15 @@
      
     UILabel *timeInfo = [[UILabel alloc] initWithFrame:CGRectMake(10, rInfo.frame.size.height + rInfo.frame.origin.y + 20, 70, 30)];
     timeInfo.text = @"离港时间";
-    timeInfo.textColor = HEXCOLOR(0xC03822);
-    timeInfo.backgroundColor = HEXCOLOR(0xDDD8D9);
-    [timeInfo setFont:[UIFont boldSystemFontOfSize:17.0]];
+    timeInfo.textColor = [UIColor blackColor];
+    [timeInfo setFont:[UIFont systemFontOfSize:11]];
     [scroll addSubview:timeInfo];
     [timeInfo release];
     
     time = [[UITextField alloc] initWithFrame:CGRectMake(82,timeInfo.frame.origin.y , 230, 30)];
-    time.font = [UIFont systemFontOfSize:17.0f];
+    time.font = [UIFont systemFontOfSize:11];
     time.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     time.layer.borderWidth = 1.0f;
-    time.backgroundColor = HEXCOLOR(0xDDD8D9);
     [scroll addSubview:time];
     [time release];
     
@@ -405,12 +403,12 @@
     remarkInfo.text = @"备    注";
     remarkInfo.textColor = HEXCOLOR(0xC03822);
     remarkInfo.backgroundColor = HEXCOLOR(0xDDD8D9);
-    [remarkInfo setFont:[UIFont boldSystemFontOfSize:17.0]];
+    [remarkInfo setFont:[UIFont systemFontOfSize:17.0]];
     [scroll addSubview:remarkInfo];
     [remarkInfo release];
     
     remark = [[UITextField alloc] initWithFrame:CGRectMake(82,time.frame.size.height + time.frame.origin.y + 20, 230, 30)];
-    remark.font = [UIFont systemFontOfSize:17.0f];
+    remark.font = [UIFont systemFontOfSize:11];
     remark.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     remark.layer.borderWidth = 1.0f;
     remark.backgroundColor = HEXCOLOR(0xDDD8D9);
