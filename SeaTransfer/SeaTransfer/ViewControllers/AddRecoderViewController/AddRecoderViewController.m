@@ -790,7 +790,9 @@
         UIImage *originImage = nil;
         if ([mediaType isEqualToString:@"public.image"])
         {
-            originImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+            UIImage *scaleImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+            originImage = [Utils scaleImage:scaleImage toScale:0.5];
+            
         }
         [self dismissViewControllerAnimated:YES completion:^{
             
@@ -948,7 +950,9 @@
                             for (ALAsset *asset in mediaInfoArray) {
                                 if ([asset valueForProperty:ALAssetPropertyType] == ALAssetTypePhoto) {
                                     
-                                    [iArray addObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]]];
+                                    UIImage *scaleImage = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]];
+                                    UIImage *originImage = [Utils scaleImage:scaleImage toScale:0.5];
+                                    [iArray addObject:originImage];
                                 }
                             }
                             if (iArray.count > 0)
@@ -988,7 +992,9 @@
                             for (ALAsset *asset in mediaInfoArray) {
                                 if ([asset valueForProperty:ALAssetPropertyType] == ALAssetTypePhoto) {
                                     
-                                    [iArray1 addObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]]];
+                                    UIImage *scaleImage = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]];
+                                    UIImage *originImage = [Utils scaleImage:scaleImage toScale:0.5];
+                                    [iArray1 addObject:originImage];
                                 }
                             }
                             if (iArray1.count > 0)
@@ -1027,7 +1033,9 @@
                             for (ALAsset *asset in mediaInfoArray) {
                                 if ([asset valueForProperty:ALAssetPropertyType] == ALAssetTypePhoto) {
                                     
-                                    [iArray2 addObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]]];
+                                    UIImage *scaleImage = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]];
+                                    UIImage *originImage = [Utils scaleImage:scaleImage toScale:0.5];
+                                    [iArray2 addObject:originImage];
                                 }
                             }
                             if (iArray2.count > 0)
@@ -1066,7 +1074,9 @@
                             for (ALAsset *asset in mediaInfoArray) {
                                 if ([asset valueForProperty:ALAssetPropertyType] == ALAssetTypePhoto) {
                                     
-                                    [iArray3 addObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]]];
+                                    UIImage *scaleImage = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]];
+                                    UIImage *originImage = [Utils scaleImage:scaleImage toScale:0.5];
+                                    [iArray3 addObject:originImage];
                                 }
                             }
                             if (iArray3.count > 0)

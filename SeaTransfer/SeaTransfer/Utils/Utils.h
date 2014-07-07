@@ -13,4 +13,7 @@
 // NSDictionary To NSString
 +(NSString*)DataTOjsonString:(id)object;
 
+//TODO:缩放图片
++(UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize;
+
 @end
