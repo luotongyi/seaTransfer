@@ -41,38 +41,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeaTransfer/ViewControllers/ListViewController/ListViewController.m"
-            timestampString = "425973105.737191"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "-checkData:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeaTransfer/ViewControllers/ListViewController/ListViewController.m"
-            timestampString = "425973328.309609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "-checkData:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
             timestampString = "426070846.505447"
             startingColumnNumber = "9223372036854775807"
@@ -81,6 +49,36 @@
             endingLineNumber = "797"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]"
+                  moduleName = "SeaTransfer"
+                  urlString = "file://localhost/Users/zhangyukimatsu/Desktop/%E8%BF%9B%E5%87%BA%E8%B4%A7%E7%AE%A1%E7%90%86/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
+                  timestampString = "428985063.781889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "797"
+                  endingLineNumber = "797"
+                  offsetFromSymbolStart = "387">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__80-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
+                  moduleName = "SeaTransfer"
+                  urlString = "file://localhost/Users/zhangyukimatsu/Desktop/%E8%BF%9B%E5%87%BA%E8%B4%A7%E7%AE%A1%E7%90%86/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
+                  timestampString = "428985063.782225"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "799"
+                  endingLineNumber = "799"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,28 +88,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/DetailViewController/DetailViewController.m"
-            timestampString = "426132262.897885"
+            timestampString = "428985063.473333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "509"
-            endingLineNumber = "509"
+            startingLineNumber = "530"
+            endingLineNumber = "530"
             landmarkName = "-seeBigPicture:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SeaTransfer/ViewControllers/DetailViewController/DetailViewController.m"
-            timestampString = "426133071.051873"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-updateDetail:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -128,6 +110,22 @@
             startingLineNumber = "1402"
             endingLineNumber = "1402"
             landmarkName = "-upLoadImageWithSort"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeaTransfer/ViewControllers/DetailViewController/DetailViewController.m"
+            timestampString = "428985063.473333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-updateDetail:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

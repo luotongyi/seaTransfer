@@ -41,7 +41,7 @@
     
     NSString *userId = [[DataCenter shareInstance].userInfo  objectForKey:@"userId"];
     NSString *vogId = [self.detailDic objectForKey:@"shipVoyageId"];
-    NSString *recoderUserId = [self.detailDic objectForKey:@"recordUserId"];
+    NSString *recoderUserId = [DataCenter shareInstance].userName;
     
     NSMutableString *string =  [[NSMutableString alloc] init];
     
@@ -56,8 +56,9 @@
         [string setString:[string substringToIndex:[string length]-1]];
     }
     
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:bm.text,@"handlingRecords.contractNo",
-                         userId == nil ? @"" : userId ,@"handlingRecords.userId",
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                         bm.text,@"handlingRecords.contractNo",
+                         salesman.text,@"handlingRecords.handleUser",
                          boatName.text,@"handlingRecords.shipName",
                          boatNo.text,@"handlingRecords.shipVoyage",
                          !vogId ? @"" : vogId,@"handlingRecords.shipVoyageId",
@@ -385,13 +386,13 @@
      [timeEnd release];
      
     UILabel *timeInfo = [[UILabel alloc] initWithFrame:CGRectMake(10, rInfo.frame.size.height + rInfo.frame.origin.y + 20, 70, 30)];
-    timeInfo.text = @"离港时间";
+    timeInfo.text = @"离港时间:";
     timeInfo.textColor = [UIColor blackColor];
     [timeInfo setFont:[UIFont systemFontOfSize:11]];
     [scroll addSubview:timeInfo];
     [timeInfo release];
     
-    time = [[UITextField alloc] initWithFrame:CGRectMake(82,timeInfo.frame.origin.y , 230, 30)];
+    time = [[UITextField alloc] initWithFrame:CGRectMake(62,timeInfo.frame.origin.y , 230, 30)];
     time.font = [UIFont systemFontOfSize:11];
     time.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     time.layer.borderWidth = 1.0f;
@@ -483,7 +484,8 @@
     planCount.text = [NSString stringWithFormat:@"%@",[self.detailDic objectForKey:@"cargoNum"]];
     actualCount.text = [NSString stringWithFormat:@"%@",[self.detailDic objectForKey:@"realNum"]];
     warehouseCapacity.text = [NSString stringWithFormat:@"%@",[self.detailDic objectForKey:@"releaseNum"]];
-    outworker.text = [self.detailDic objectForKey:@"recordUserId"];
+//    outworker.text = [self.detailDic objectForKey:@"recordUserId"];
+    outworker.text = [DataCenter shareInstance].userName;
     remark.text = [self.detailDic objectForKey:@"remark"];
     timeStart.text = [self.detailDic objectForKey:@"workBeg"];
     timeEnd.text = [self.detailDic objectForKey:@"workEnd"];
@@ -562,6 +564,13 @@
     
     [self.view endEditing:YES];
     return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        scroll.frame = CGRectMake(0, 0, 320, kScreenHeight - 64);
+    }];
 }
 
 - (void)didReceiveMemoryWarning

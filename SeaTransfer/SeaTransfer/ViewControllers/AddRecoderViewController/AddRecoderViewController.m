@@ -302,7 +302,7 @@
     [scroll addSubview:timeInfo];
     [timeInfo release];
     
-    time = [[UITextField alloc] initWithFrame:CGRectMake(72,lInfo.frame.size.height + lInfo.frame.origin.y + 20, 240, 30)];
+    time = [[UITextField alloc] initWithFrame:CGRectMake(62,lInfo.frame.size.height + lInfo.frame.origin.y + 20, 240, 30)];
     time.font = [UIFont systemFontOfSize:11];
     time.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     time.layer.borderWidth = 1.0f;
