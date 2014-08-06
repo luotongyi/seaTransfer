@@ -52,6 +52,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    clientName：用户名
+//    clientPwd：登录密码
+//    clientRePwd：确认密码
+//    companyName：公司名称
+//    clientMobile：手机号码
+//    clientEmail:电子邮件
+    
 	// Do any additional setup after loading the view.
 }
 

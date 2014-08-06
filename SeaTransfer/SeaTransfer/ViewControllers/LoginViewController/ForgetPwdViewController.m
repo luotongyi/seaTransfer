@@ -91,6 +91,66 @@
     emailTf.font = [UIFont systemFontOfSize:13.0f];
     emailTf.textColor = [UIColor darkGrayColor];
     [self.view addSubview:emailTf];
+    
+    UIButton *forgetPwdBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    forgetPwdBtn.frame = CGRectMake(30, 130, 260, 30);
+    forgetPwdBtn.layer.cornerRadius = 4.0;
+    forgetPwdBtn.layer.borderWidth = 1.0;
+    forgetPwdBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    forgetPwdBtn.backgroundColor = HEXCOLOR(0x76B8FF);
+    [forgetPwdBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [forgetPwdBtn setTitle:@"找回密码" forState:UIControlStateNormal];
+    [forgetPwdBtn addTarget:self action:@selector(forgetInServer:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:forgetPwdBtn];
+}
+
+- (void)forgetInServer:(id)sender
+{
+    NSString *pathStr=@"http://114.215.103.53/wfplatform/user_password.action";
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];
+    
+    httpClient.parameterEncoding = AFFormURLParameterEncoding;
+    
+    [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                         @"employee",@"pwd_type",
+                         nameTf.text,@"clientName",
+                         emailTf.text,@"clientEmail"
+                         ,nil];
+    
+    NSMutableDictionary *params=[[NSMutableDictionary alloc] initWithDictionary:dic];
+    
+    [httpClient postPath:pathStr parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        [self checkData:responseObject];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"[HTTPClient Error]: %@", error);
+        
+        alertMessage(@"更新装卸记录失败，请检查网络链接.");
+    }];
+    
+    [params release];
+    
+    [httpClient release];
+}
+
+-(void) checkData:(NSData *)data
+{
+    NSError *error = nil;
+    NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSDictionary *info = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    if (error || !info) {
+        alertMessage(@"请求错误，请重新操作");
+        return ;
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[info objectForKey:@"title"] message:[info objectForKey:@"detail"] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
+    [alert release];
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
