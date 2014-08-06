@@ -52,6 +52,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    wfplatform/user_reg.action
 //    clientName：用户名
 //    clientPwd：登录密码
 //    clientRePwd：确认密码
