@@ -109,12 +109,15 @@
         [searchArray addObject:obj];
     }
     
-    portAgent = [[info objectForKey:@"portAgent"] copy];
+    portAgent = [[info objectForKey:@"loadingPortAgent"] copy];
+    portAgent1 = [[info objectForKey:@"unloadingPortAgent"] copy];
     shipSpec = [[info objectForKey:@"shipSpec"] copy];
     
     NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:13]};
     
     portSize = [portAgent boundingRectWithSize:CGSizeMake(310, 3000) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+    
+    portSize1 = [portAgent1 boundingRectWithSize:CGSizeMake(310, 3000) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
     
     shipSize = [shipSpec boundingRectWithSize:CGSizeMake(310, 3000) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
     
@@ -127,24 +130,27 @@
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 4;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return section == 2 ? [searchArray count] : 1;
+    return section == 3 ? [searchArray count] : 1;
 }
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     switch (section) {
         case 0:
-            return @"港口船代";
+            return @"装港船代";
             break;
         case 1:
-            return @"船舶规范";
+            return @"卸港船代";
             break;
         case 2:
+            return @"船舶规范";
+            break;
+        case 3:
             return @"动态";
             break;
         default:
@@ -160,9 +166,12 @@
             return portSize.height+10;
             break;
         case 1:
-            return shipSize.height+10;
+            return portSize1.height+10;
             break;
         case 2:
+            return shipSize.height+10;
+            break;
+        case 3:
             return 45.0f;
             break;
         default:
@@ -188,8 +197,12 @@
     if (indexPath.section == 0) {
         cell.detailTextLabel.text = portAgent;
     } else if (indexPath.section == 1) {
+        cell.detailTextLabel.text = portAgent1;
+    }else if (indexPath.section == 2)
+    {
         cell.detailTextLabel.text = shipSpec;
-    } else {
+    }
+    else {
         NSInteger row = indexPath.row;
         NSDictionary *detail = [searchArray objectAtIndex:row];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@    %@   ",[detail objectForKey:@"activeDate"],[detail objectForKey:@"shipActive"]];

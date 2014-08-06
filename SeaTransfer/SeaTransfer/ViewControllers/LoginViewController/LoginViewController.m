@@ -8,6 +8,9 @@
 
 #import "LoginViewController.h"
 
+#import "RegisterViewController.h"
+#import "ForgetPwdViewController.h"
+
 @interface LoginViewController ()
 
 @end
@@ -27,13 +30,51 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    loginView = [[LoginView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    loginView = [[LoginView alloc] initWithFrame:CGRectMake(0, -64, kScreenWidth, kScreenHeight)];
     
     NSLog(@"%.2f,%.2f",kScreenWidth,kScreenHeight);
     
     loginView.delegate = self;
     [self.view addSubview:loginView];
     [loginView release];
+    
+    UIButton *registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    registerBtn.frame = CGRectMake(30, 410, 120, 30);
+    registerBtn.layer.cornerRadius = 4.0;
+    registerBtn.layer.borderWidth = 1.0;
+    registerBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    registerBtn.backgroundColor = HEXCOLOR(0x76B8FF);
+    [registerBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [registerBtn setTitle:@"注册" forState:UIControlStateNormal];
+    [registerBtn addTarget:self action:@selector(rgisterInServer:) forControlEvents:UIControlEventTouchUpInside];
+    [loginView addSubview:registerBtn];
+    
+    UIButton *forgetPwdBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    forgetPwdBtn.frame = CGRectMake(170, 410, 120, 30);
+    forgetPwdBtn.layer.cornerRadius = 4.0;
+    forgetPwdBtn.layer.borderWidth = 1.0;
+    forgetPwdBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    forgetPwdBtn.backgroundColor = HEXCOLOR(0x76B8FF);
+    [forgetPwdBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [forgetPwdBtn setTitle:@"忘记密码" forState:UIControlStateNormal];
+    [forgetPwdBtn addTarget:self action:@selector(forgetInServer:) forControlEvents:UIControlEventTouchUpInside];
+    [loginView addSubview:forgetPwdBtn];
+}
+
+- (void)rgisterInServer:(id)sender
+{
+    RegisterViewController *controller = [[RegisterViewController alloc]init];
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+}
+
+- (void)forgetInServer:(id)sender
+{
+    ForgetPwdViewController *controller = [[ForgetPwdViewController alloc]init];
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
 }
 
 -(void) loginInServce:(NSString *)name withPassword:(NSString *)pwd

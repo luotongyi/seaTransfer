@@ -16,4 +16,6 @@
 //TODO:缩放图片
 +(UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize;
 
++ (BOOL)isEmailAddress:(NSString*)email;
+
 @end

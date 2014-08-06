@@ -8,6 +8,8 @@
 
 #import "LoginView.h"
 
+
+
 @implementation LoginView
 @synthesize delegate;
 - (id)initWithFrame:(CGRect)frame
@@ -42,21 +44,20 @@
     [bgView setImage:[UIImage imageNamed:@"loginBg"]];
     [self addSubview:bgView];
     
-    UIView *baseView = [[UIView alloc] initWithFrame:CGRectMake(0, 300 + high, 320, 140)];
+    UIView *baseView = [[UIView alloc] initWithFrame:CGRectMake(0, 260 + high, 320, 140)];
     baseView.backgroundColor = [UIColor clearColor];
     [bgView addSubview:baseView];
     
     //    用户名和密码
-    UILabel *nametab = [[UILabel alloc] initWithFrame:CGRectMake(30, 5, 60, 20)];
+    UILabel *nametab = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 60, 20)];
     nametab.text = @"用户名：";
-    nametab.textAlignment = NSTextAlignmentRight;
     nametab.textColor = [UIColor blackColor];
     nametab.backgroundColor = [UIColor clearColor];
     nametab.font = [UIFont systemFontOfSize:13.0f];
     [baseView addSubview:nametab];
     [nametab release];
     
-    name = [[UITextField alloc] initWithFrame:CGRectMake(95, 0, 200, 30)];
+    name = [[UITextField alloc] initWithFrame:CGRectMake(85, 0, 200, 30)];
     name.delegate = self;
     name.backgroundColor = [UIColor whiteColor];
     name.borderStyle = UITextBorderStyleNone;
@@ -66,16 +67,15 @@
     [baseView addSubview:name];
     [name release];
     
-    nametab = [[UILabel alloc] initWithFrame:CGRectMake(30, 45, 60, 20)];
+    nametab = [[UILabel alloc] initWithFrame:CGRectMake(20, 45, 60, 20)];
     nametab.text = @"密  码：";
-    nametab.textAlignment = NSTextAlignmentRight;
     nametab.textColor = [UIColor blackColor];
     nametab.backgroundColor = [UIColor clearColor];
     nametab.font = [UIFont systemFontOfSize:13.0f];
     [baseView addSubview:nametab];
     [nametab release];
     
-    pwd = [[UITextField alloc] initWithFrame:CGRectMake(95, 40, 200, 30)];
+    pwd = [[UITextField alloc] initWithFrame:CGRectMake(85, 40, 200, 30)];
     pwd.delegate = self;
     pwd.backgroundColor = [UIColor whiteColor];
     pwd.borderStyle = UITextBorderStyleNone;
@@ -89,7 +89,7 @@
     //    记住密码
     UIButton *rememberPassBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rememberPassBtn.tag = 1000;
-    rememberPassBtn.frame = CGRectMake(95, 80, 20, 20);
+    rememberPassBtn.frame = CGRectMake(85, 80, 20, 20);
     rememberPassBtn.backgroundColor = [UIColor clearColor];
     [rememberPassBtn setBackgroundImage:[UIImage imageNamed:@"home_login_uncheck"] forState:UIControlStateNormal];
     [rememberPassBtn setBackgroundImage:[UIImage imageNamed:@"home_login_check"] forState:UIControlStateSelected];
@@ -97,7 +97,7 @@
     [rememberPassBtn addTarget:self action:@selector(rememberPassword:) forControlEvents:UIControlEventTouchUpInside];
     [baseView addSubview:rememberPassBtn];
 
-    UILabel *rememberLab = [[UILabel alloc] initWithFrame:CGRectMake(120, 80, 82, 20)];
+    UILabel *rememberLab = [[UILabel alloc] initWithFrame:CGRectMake(110, 80, 82, 20)];
     rememberLab.text = @"记住密码";
     rememberLab.textColor = [UIColor blackColor];
     rememberLab.backgroundColor = [UIColor clearColor];
@@ -125,7 +125,7 @@
     
     //    登录到服务器
     UIButton *login = [UIButton buttonWithType:UIButtonTypeCustom];
-    login.frame = CGRectMake(95, 110, 200, 30);
+    login.frame = CGRectMake(30, 110, 260, 30);
     login.layer.cornerRadius = 4.0;
     login.layer.borderWidth = 1.0;
     login.layer.borderColor = [UIColor lightGrayColor].CGColor;

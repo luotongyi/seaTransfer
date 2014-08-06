@@ -15,9 +15,9 @@
     UITextField *searchText;
     UIButton *searchBtn;
     UIView *headerView;
-    CGSize portSize;
+    CGSize portSize,portSize1;
     CGSize shipSize;
-    NSString *portAgent;
+    NSString *portAgent,*portAgent1;
     NSString *shipSpec;
 }
 @end

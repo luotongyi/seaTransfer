@@ -12,6 +12,8 @@
 		736BA856195C2FF500DA66C6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 736BA853195C2FF500DA66C6 /* icon.png */; };
 		736BA857195C2FF500DA66C6 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 736BA854195C2FF500DA66C6 /* icon@2x.png */; };
 		736BA859195C321E00DA66C6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736BA858195C321E00DA66C6 /* AudioToolbox.framework */; };
+		7396E5B31992010D00C2E93E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7396E5B21992010D00C2E93E /* RegisterViewController.m */; };
+		7396E5B61992011B00C2E93E /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7396E5B51992011B00C2E93E /* ForgetPwdViewController.m */; };
 		73A8A3DE195C281200E74FC6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73A8A3DB195C281200E74FC6 /* Default-568h@2x.png */; };
 		73A8A3DF195C281200E74FC6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 73A8A3DC195C281200E74FC6 /* Default.png */; };
 		73A8A3E0195C281200E74FC6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73A8A3DD195C281200E74FC6 /* Default@2x.png */; };
@@ -99,6 +101,10 @@
 		736BA853195C2FF500DA66C6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = SeaTransfer/icon.png; sourceTree = SOURCE_ROOT; };
 		736BA854195C2FF500DA66C6 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "SeaTransfer/icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		736BA858195C321E00DA66C6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7396E5B11992010D00C2E93E /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		7396E5B21992010D00C2E93E /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		7396E5B41992011B00C2E93E /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
+		7396E5B51992011B00C2E93E /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		73A8A3DB195C281200E74FC6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "SeaTransfer/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		73A8A3DC195C281200E74FC6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = SeaTransfer/Default.png; sourceTree = SOURCE_ROOT; };
 		73A8A3DD195C281200E74FC6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "SeaTransfer/Default@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -369,6 +375,10 @@
 				9E4127AC190DF18900EDC5AA /* LoginViewController.m */,
 				9E4127AE190DF19F00EDC5AA /* LoginView.h */,
 				9E4127AF190DF19F00EDC5AA /* LoginView.m */,
+				7396E5B11992010D00C2E93E /* RegisterViewController.h */,
+				7396E5B21992010D00C2E93E /* RegisterViewController.m */,
+				7396E5B41992011B00C2E93E /* ForgetPwdViewController.h */,
+				7396E5B51992011B00C2E93E /* ForgetPwdViewController.m */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -676,6 +686,7 @@
 				9EFAFD28190E25DD0000223A /* ListViewController.m in Sources */,
 				9E4C9B2D1910EE41009461D2 /* CollectionCell.m in Sources */,
 				9EF15F4C190E37C40059615F /* AFURLConnectionOperation.m in Sources */,
+				7396E5B61992011B00C2E93E /* ForgetPwdViewController.m in Sources */,
 				9E4127B0190DF19F00EDC5AA /* LoginView.m in Sources */,
 				9EF15F46190E37C40059615F /* AFHTTPClient.m in Sources */,
 				9EFAFD24190E015D0000223A /* Utils.m in Sources */,
@@ -690,6 +701,7 @@
 				9EFAFD2C190E28630000223A /* DetailViewController.m in Sources */,
 				9E62168F190E5465000BBFDB /* CHPickerView.m in Sources */,
 				9E6216BF190E56FE000BBFDB /* QBImagePickerVideoInfoView.m in Sources */,
+				7396E5B31992010D00C2E93E /* RegisterViewController.m in Sources */,
 				9E6216B9190E56FE000BBFDB /* QBImagePickerAssetCell.m in Sources */,
 				9E6216A1190E55E8000BBFDB /* FMDatabaseQueue.m in Sources */,
 				9E6216A2190E55E8000BBFDB /* FMResultSet.m in Sources */,
@@ -766,8 +778,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HONGKUN WANG (A6L8W2KK7S)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HONGKUN WANG (A6L8W2KK7S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tongyi luo (HFFPWTSV3R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tongyi luo (HFFPWTSV3R)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -785,7 +797,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "D177E623-387F-4D52-ABE9-54F479989723";
+				PROVISIONING_PROFILE = "4DA19C6B-47B1-45B0-9A42-8EEAE22BFBCE";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -806,8 +818,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HONGKUN WANG (A6L8W2KK7S)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: HONGKUN WANG (A6L8W2KK7S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tongyi luo (HFFPWTSV3R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tongyi luo (HFFPWTSV3R)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -818,7 +830,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PROVISIONING_PROFILE = "D177E623-387F-4D52-ABE9-54F479989723";
+				PROVISIONING_PROFILE = "4DA19C6B-47B1-45B0-9A42-8EEAE22BFBCE";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -828,14 +840,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HONGKUN WANG (A6L8W2KK7S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tongyi luo (HFFPWTSV3R)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SeaTransfer/SeaTransfer-Prefix.pch";
 				INFOPLIST_FILE = "SeaTransfer/SeaTransfer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = SeaTransfer;
-				PROVISIONING_PROFILE = "D177E623-387F-4D52-ABE9-54F479989723";
+				PROVISIONING_PROFILE = "4DA19C6B-47B1-45B0-9A42-8EEAE22BFBCE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -844,13 +856,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: HONGKUN WANG (A6L8W2KK7S)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tongyi luo (HFFPWTSV3R)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SeaTransfer/SeaTransfer-Prefix.pch";
 				INFOPLIST_FILE = "SeaTransfer/SeaTransfer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = SeaTransfer;
-				PROVISIONING_PROFILE = "D177E623-387F-4D52-ABE9-54F479989723";
+				PROVISIONING_PROFILE = "4DA19C6B-47B1-45B0-9A42-8EEAE22BFBCE";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

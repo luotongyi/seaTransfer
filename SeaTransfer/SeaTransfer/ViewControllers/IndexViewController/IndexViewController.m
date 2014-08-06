@@ -71,15 +71,27 @@
 -(void) viewDidAppear:(BOOL)animated
 {
     if (![DataCenter shareInstance].isLogin) {
+        
         LoginViewController *login = [[LoginViewController alloc] init];
+        UINavigationController *loginNav = [[UINavigationController alloc]initWithRootViewController:login];
+        loginNav.navigationBar.translucent = NO;
+        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Arial-BoldMT" size:20],NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil];
+        loginNav.navigationBar.titleTextAttributes = dict;
+        if (isIOS7) {
+            loginNav.navigationBar.barTintColor = HEXCOLOR(0x176B8FF);
+        } else {
+            loginNav.navigationBar.tintColor = HEXCOLOR(0x176B8FF);
+        }
+//        loginNav.navigationBar.hidden = YES;
         login.title = @"登录";
         [UIView  beginAnimations:nil context:NULL];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
         [UIView setAnimationDuration:0.75];
-        [self presentViewController:login animated:YES completion:^{}];
+        [self presentViewController:loginNav animated:YES completion:^{}];
         [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:NO];
         [UIView commitAnimations];
         [login release];
+        [loginNav release];
     }
     
     //开始    左按钮。 显示用户登录名称——————————————————————————————————————
@@ -125,14 +137,24 @@
     
     LoginViewController *login = [[LoginViewController alloc] init];
     login.title = @"登录";
+    UINavigationController *loginNav = [[UINavigationController alloc]initWithRootViewController:login];
+    loginNav.navigationBar.translucent = NO;
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Arial-BoldMT" size:20],NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil];
+    loginNav.navigationBar.titleTextAttributes = dict;
+    if (isIOS7) {
+        loginNav.navigationBar.barTintColor = HEXCOLOR(0x176B8FF);
+    } else {
+        loginNav.navigationBar.tintColor = HEXCOLOR(0x176B8FF);
+    }
+//    loginNav.navigationBar.hidden = YES;
     [UIView  beginAnimations:nil context:NULL];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.75];
-    [self presentViewController:login animated:YES completion:^{}];
+    [self presentViewController:loginNav animated:YES completion:^{}];
     [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:NO];
     [UIView commitAnimations];
     [login release];
-    
+    [loginNav release];
 }
 
 /*-(void) searchState:(id) sender
