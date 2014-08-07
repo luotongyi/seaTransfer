@@ -106,18 +106,20 @@
 
 - (void)forgetInServer:(id)sender
 {
-    NSString *pathStr=@"http://114.215.103.53/wfplatform/user_password.action";
+    NSString *pathStr=@"http://114.215.103.53/wfplatform/user_password!pwd.action";
     
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];
     
-    httpClient.parameterEncoding = AFFormURLParameterEncoding;
+    httpClient.parameterEncoding = AFFormURLParameterEncoding;   //设置请求参数的类型   plist/json/urlParameter 3种格式
+    
+//    [httpClient setDefaultHeader:@"User-Agent" value:@"Mozilla/5.0 (iphone; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"];
     
     [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
                          @"employee",@"pwd_type",
-                         nameTf.text,@"clientName",
-                         emailTf.text,@"clientEmail"
+                         nameTf.text,@"client.clientName",
+                         emailTf.text,@"client.clientEmail"
                          ,nil];
     
     NSMutableDictionary *params=[[NSMutableDictionary alloc] initWithDictionary:dic];
