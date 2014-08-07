@@ -73,7 +73,7 @@
     [self.view addSubview:nameTf];
     
     nametab = [[UILabel alloc] initWithFrame:CGRectMake(20, 85, 60, 20)];
-    nametab.text = @"密  码：";
+    nametab.text = @"电子邮箱：";
     nametab.textColor = [UIColor blackColor];
     nametab.backgroundColor = [UIColor clearColor];
     nametab.font = [UIFont systemFontOfSize:13.0f];
@@ -93,7 +93,7 @@
     [self.view addSubview:emailTf];
     
     UIButton *forgetPwdBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    forgetPwdBtn.frame = CGRectMake(30, 130, 260, 30);
+    forgetPwdBtn.frame = CGRectMake(20, 130, 260, 30);
     forgetPwdBtn.layer.cornerRadius = 4.0;
     forgetPwdBtn.layer.borderWidth = 1.0;
     forgetPwdBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
