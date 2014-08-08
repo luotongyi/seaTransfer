@@ -132,7 +132,7 @@
         
         NSLog(@"[HTTPClient Error]: %@", error);
         
-        alertMessage(@"更新装卸记录失败，请检查网络链接.");
+        alertMessage(@"请求失败，请检查网络链接.");
     }];
     
     [params release];

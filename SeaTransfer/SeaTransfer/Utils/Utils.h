@@ -18,4 +18,6 @@
 
 + (BOOL)isEmailAddress:(NSString*)email;
 
++ (BOOL)isMobileNumber:(NSString *)mobileNum;
+
 @end

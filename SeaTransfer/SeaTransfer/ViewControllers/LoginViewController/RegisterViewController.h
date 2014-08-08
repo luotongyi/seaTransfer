@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : UIViewController<UITextFieldDelegate,UIAlertViewDelegate>
+{
+    UIScrollView *baseScrollview;
+    UITextField *tf1,*tf2,*tf3,*tf4,*tf5,*tf6;
+}
 
 @end

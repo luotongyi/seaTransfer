@@ -57,7 +57,7 @@
                   symbolName = "-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]"
                   moduleName = "SeaTransfer"
                   urlString = "file://localhost/Users/zhangyukimatsu/Desktop/%E8%BF%9B%E5%87%BA%E8%B4%A7%E7%AE%A1%E7%90%86/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-                  timestampString = "429092341.448081"
+                  timestampString = "429171614.396843"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "797"
@@ -71,7 +71,7 @@
                   symbolName = "__80-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
                   moduleName = "SeaTransfer"
                   urlString = "file://localhost/Users/zhangyukimatsu/Desktop/%E8%BF%9B%E5%87%BA%E8%B4%A7%E7%AE%A1%E7%90%86/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-                  timestampString = "429092341.448431"
+                  timestampString = "429171614.397209"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "799"
@@ -136,11 +136,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/LoginViewController/ForgetPwdViewController.m"
-            timestampString = "429091779.691128"
+            timestampString = "429169780.20769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-checkData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeaTransfer/ViewControllers/LoginViewController/RegisterViewController.m"
+            timestampString = "429170039.306657"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "-checkData:"
             landmarkType = "5">
          </BreakpointContent>
