@@ -57,8 +57,10 @@
     [label release];
     
     tf1 = [[UITextField alloc]initWithFrame:CGRectMake(100, 20, 150, 20)];
+    tf1.delegate = self;
     tf1.placeholder = @"请输入用户名";
     tf1.text = @"";
+    tf1.borderStyle = UITextBorderStyleNone;
     tf1.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf1.layer.borderWidth = 1.0f;
     tf1.backgroundColor = [UIColor whiteColor];
@@ -74,6 +76,8 @@
     tf2 = [[UITextField alloc]initWithFrame:CGRectMake(100, 50, 150, 20)];
     tf2.placeholder = @"请输入密码";
     tf2.text = @"";
+    tf2.delegate = self;
+    tf2.borderStyle = UITextBorderStyleNone;
     tf2.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf2.layer.borderWidth = 1.0f;
     tf2.backgroundColor = [UIColor whiteColor];
@@ -89,6 +93,8 @@
     tf3 = [[UITextField alloc]initWithFrame:CGRectMake(100, 80, 150, 20)];
     tf3.placeholder = @"请确认密码";
     tf3.text = @"";
+    tf3.delegate = self;
+    tf3.borderStyle = UITextBorderStyleNone;
     tf3.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf3.layer.borderWidth = 1.0f;
     tf3.backgroundColor = [UIColor whiteColor];
@@ -104,6 +110,8 @@
     tf4 = [[UITextField alloc]initWithFrame:CGRectMake(100, 110, 150, 20)];
     tf4.placeholder = @"请输入手机号";
     tf4.text = @"";
+    tf4.delegate = self;
+    tf4.borderStyle = UITextBorderStyleNone;
     tf4.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf4.layer.borderWidth = 1.0f;
     tf4.backgroundColor = [UIColor whiteColor];
@@ -119,6 +127,8 @@
     tf5 = [[UITextField alloc]initWithFrame:CGRectMake(100, 140, 150, 20)];
     tf5.placeholder = @"请输入邮箱";
     tf5.text = @"";
+    tf5.delegate = self;
+    tf5.borderStyle = UITextBorderStyleNone;
     tf5.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf5.layer.borderWidth = 1.0f;
     tf5.backgroundColor = [UIColor whiteColor];
@@ -134,6 +144,8 @@
     tf6 = [[UITextField alloc]initWithFrame:CGRectMake(100, 170, 150, 20)];
     tf6.placeholder = @"请输入公司名称";
     tf6.text = @"";
+    tf6.delegate = self;
+    tf6.borderStyle = UITextBorderStyleNone;
     tf6.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf6.layer.borderWidth = 1.0f;
     tf6.backgroundColor = [UIColor whiteColor];

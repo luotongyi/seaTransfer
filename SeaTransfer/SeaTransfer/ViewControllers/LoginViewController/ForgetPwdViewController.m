@@ -52,7 +52,7 @@
 {
     [super viewDidLoad];
 	
-    UILabel *nametab = [[UILabel alloc] initWithFrame:CGRectMake(20, 45, 60, 20)];
+    UILabel *nametab = [[UILabel alloc] initWithFrame:CGRectMake(20, 45, 70, 20)];
     nametab.text = @"用户名：";
     nametab.textColor = [UIColor blackColor];
     nametab.backgroundColor = [UIColor clearColor];
@@ -60,7 +60,7 @@
     [self.view addSubview:nametab];
     [nametab release];
     
-    nameTf = [[UITextField alloc] initWithFrame:CGRectMake(85, 40, 200, 30)];
+    nameTf = [[UITextField alloc] initWithFrame:CGRectMake(95, 40, 200, 30)];
     nameTf.delegate = self;
     nameTf.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     nameTf.layer.borderWidth = 1.0f;
@@ -72,7 +72,7 @@
     nameTf.textColor = [UIColor darkGrayColor];
     [self.view addSubview:nameTf];
     
-    nametab = [[UILabel alloc] initWithFrame:CGRectMake(20, 85, 60, 20)];
+    nametab = [[UILabel alloc] initWithFrame:CGRectMake(20, 85, 70, 20)];
     nametab.text = @"电子邮箱：";
     nametab.textColor = [UIColor blackColor];
     nametab.backgroundColor = [UIColor clearColor];
@@ -80,7 +80,7 @@
     [self.view addSubview:nametab];
     [nametab release];
     
-    emailTf = [[UITextField alloc] initWithFrame:CGRectMake(85, 80, 200, 30)];
+    emailTf = [[UITextField alloc] initWithFrame:CGRectMake(95, 80, 200, 30)];
     emailTf.delegate = self;
     emailTf.text = @"";
     emailTf.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
