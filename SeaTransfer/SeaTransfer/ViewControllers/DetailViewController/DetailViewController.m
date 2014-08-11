@@ -42,6 +42,7 @@
     NSString *userId = [[DataCenter shareInstance].userInfo  objectForKey:@"userId"];
     NSString *vogId = [self.detailDic objectForKey:@"shipVoyageId"];
     NSString *recoderUserId = [DataCenter shareInstance].userName;
+    NSString *recordsId = [self.detailDic objectForKey:@"id"];
     
     NSMutableString *string =  [[NSMutableString alloc] init];
     
@@ -57,6 +58,7 @@
     }
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                         recordsId,@"handlingRecords.id",
                          bm.text,@"handlingRecords.contractNo",
                          salesman.text,@"handlingRecords.handleUser",
                          boatName.text,@"handlingRecords.shipName",
