@@ -46,7 +46,18 @@
     
     NSMutableString *string =  [[NSMutableString alloc] init];
     
-    NSArray *array = [self.detailDic objectForKey:@"img"];
+    NSString *str1 = [self.detailDic objectForKey:@"emptyImg"];
+    NSString *str2 = [self.detailDic objectForKey:@"finishImg"];
+    NSString *str3 = [self.detailDic objectForKey:@"img"];
+    NSString *str4 = [self.detailDic objectForKey:@"loadImg"];
+    str4 = [str4 substringToIndex:[str4 length]-1];
+    
+    [string appendString:str1];
+    [string appendString:str2];
+    [string appendString:str3];
+    [string appendString:str4];
+    
+    /*NSArray *array = [self.detailDic objectForKey:@"imgs"];
     
     for (NSString *url in array) {
         NSString *img = [NSString stringWithFormat:@"%@,",[url substringFromIndex:[url length]-19] ];
@@ -55,7 +66,7 @@
     
     if ([string length] >0) {
         [string setString:[string substringToIndex:[string length]-1]];
-    }
+    }*/
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
                          recordsId,@"handlingRecords.id",

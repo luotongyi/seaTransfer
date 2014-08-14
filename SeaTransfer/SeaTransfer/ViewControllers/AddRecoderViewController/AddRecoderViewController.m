@@ -598,6 +598,12 @@
 
 -(void) addRecoder:(id) sender
 {
+    if (isSending) {
+        return;
+    }
+    
+    isSending = YES;
+    
     for (int i = 2000; i<2016; i++) {
         UITextField *field = (UITextField *)[self.view viewWithTag:i];
         if ([field.text length] == 0 && field.tag != 2006) {
@@ -652,13 +658,13 @@
     NSMutableDictionary *params=[[NSMutableDictionary alloc] initWithDictionary:dics];
 
     [httpClient postPath:pathStr parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
+        isSending = NO;
         [self checkData:responseObject];
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 
         NSLog(@"[HTTPClient Error]: %@", error);
-        
+        isSending = NO;
         alertMessage(@"添加装卸记录失败，请检查网络链接.");
     }];
     
@@ -1427,7 +1433,7 @@
     switch (upImageBtnTag) {
         case 5000:
         {
-            [iArray removeAllObjects];
+//            [iArray removeAllObjects];
             for (int i =finishCount-1; i<finishCount; i++)
             {
                 UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5+55*i, 5, 50, 50)];
@@ -1440,7 +1446,7 @@
             break;
         case 5001:
         {
-            [iArray1 removeAllObjects];
+//            [iArray1 removeAllObjects];
             for (int i =finishCount-1; i<finishCount; i++)
             {
                 UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5+55*i, 5, 50, 50)];
@@ -1453,7 +1459,7 @@
             break;
         case 5002:
         {
-            [iArray2 removeAllObjects];
+//            [iArray2 removeAllObjects];
             for (int i =finishCount-1; i<finishCount; i++)
             {
                 UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5+55*i, 5, 50, 50)];
@@ -1466,7 +1472,7 @@
             break;
         case 5003:
         {
-            [iArray3 removeAllObjects];
+//            [iArray3 removeAllObjects];
             for (int i =finishCount-1; i<finishCount; i++)
             {
                 UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(5+55*i, 5, 50, 50)];

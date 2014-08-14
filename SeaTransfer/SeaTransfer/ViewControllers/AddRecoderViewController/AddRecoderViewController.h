@@ -54,5 +54,7 @@
     UIButton *btn1,*btn2,*btn3,*btn4;
     
     NSInteger upImageBtnTag;
+    
+    BOOL isSending;
 }
 @end

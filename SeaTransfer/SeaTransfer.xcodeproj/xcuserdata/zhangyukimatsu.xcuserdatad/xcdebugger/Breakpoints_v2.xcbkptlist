@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-            timestampString = "426392793.508803"
+            timestampString = "429690022.831804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1490"
-            endingLineNumber = "1490"
+            startingLineNumber = "1496"
+            endingLineNumber = "1496"
             landmarkName = "-reloadWaterView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-            timestampString = "425808759.633519"
+            timestampString = "429690022.831804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "675"
-            endingLineNumber = "675"
+            startingLineNumber = "681"
+            endingLineNumber = "681"
             landmarkName = "-checkData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-            timestampString = "426070846.505447"
+            timestampString = "429690022.831804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "797"
-            endingLineNumber = "797"
+            startingLineNumber = "803"
+            endingLineNumber = "803"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
             <Locations>
@@ -56,13 +56,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]"
                   moduleName = "SeaTransfer"
-                  urlString = "file://localhost/Users/zhangyukimatsu/Desktop/%E8%BF%9B%E5%87%BA%E8%B4%A7%E7%AE%A1%E7%90%86/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-                  timestampString = "429415165.191065"
+                  urlString = "file://localhost/Users/zhangyukimatsu/Desktop/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
+                  timestampString = "429692005.153261"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "797"
-                  endingLineNumber = "797"
-                  offsetFromSymbolStart = "387">
+                  startingLineNumber = "803"
+                  endingLineNumber = "803"
+                  offsetFromSymbolStart = "484">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -70,13 +70,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__80-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
                   moduleName = "SeaTransfer"
-                  urlString = "file://localhost/Users/zhangyukimatsu/Desktop/%E8%BF%9B%E5%87%BA%E8%B4%A7%E7%AE%A1%E7%90%86/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-                  timestampString = "429415165.191423"
+                  urlString = "file://localhost/Users/zhangyukimatsu/Desktop/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
+                  timestampString = "429692005.153674"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "799"
-                  endingLineNumber = "799"
-                  offsetFromSymbolStart = "38">
+                  startingLineNumber = "803"
+                  endingLineNumber = "803"
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/DetailViewController/DetailViewController.m"
-            timestampString = "428985063.473333"
+            timestampString = "429691783.389471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "530"
-            endingLineNumber = "530"
+            startingLineNumber = "541"
+            endingLineNumber = "541"
             landmarkName = "-textFieldShouldBeginEditing:"
             landmarkType = "5">
          </BreakpointContent>
@@ -103,28 +103,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-            timestampString = "426392721.353747"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1402"
-            endingLineNumber = "1402"
-            landmarkName = "-upLoadImageWithSort"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/DetailViewController/DetailViewController.m"
-            timestampString = "428985063.473333"
+            timestampString = "429691783.389471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-updateDetail:"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,12 +184,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SeaTransfer/ViewControllers/DetailViewController/DetailViewController.m"
-            timestampString = "429415494.843877"
+            timestampString = "429691783.389471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "512"
+            endingLineNumber = "512"
             landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
+            timestampString = "429691754.886291"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1418"
+            endingLineNumber = "1418"
+            landmarkName = "-reloadWaterView:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
+            timestampString = "429691764.492258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1387"
+            endingLineNumber = "1387"
+            landmarkName = "-upLoadImageWithSort"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
