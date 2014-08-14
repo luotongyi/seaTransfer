@@ -83,7 +83,7 @@
             loginNav.navigationBar.tintColor = HEXCOLOR(0x176B8FF);
         }
 //        loginNav.navigationBar.hidden = YES;
-        login.title = @"登录";
+        login.title = @"e租船";
         [UIView  beginAnimations:nil context:NULL];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
         [UIView setAnimationDuration:0.75];
@@ -136,7 +136,7 @@
     [[DataCenter shareInstance].userInfo removeAllObjects];
     
     LoginViewController *login = [[LoginViewController alloc] init];
-    login.title = @"登录";
+    login.title = @"e租船";
     UINavigationController *loginNav = [[UINavigationController alloc]initWithRootViewController:login];
     loginNav.navigationBar.translucent = NO;
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Arial-BoldMT" size:20],NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil];

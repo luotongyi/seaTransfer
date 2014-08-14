@@ -64,7 +64,7 @@
 - (void)rgisterInServer:(id)sender
 {
     RegisterViewController *controller = [[RegisterViewController alloc]init];
-    self.navigationController.navigationBarHidden = NO;
+    self.presentedViewController.navigationController.navigationBarHidden = NO;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
 }
@@ -72,7 +72,7 @@
 - (void)forgetInServer:(id)sender
 {
     ForgetPwdViewController *controller = [[ForgetPwdViewController alloc]init];
-    self.navigationController.navigationBarHidden = NO;
+    self.presentedViewController.navigationController.navigationBarHidden = NO;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
 }
