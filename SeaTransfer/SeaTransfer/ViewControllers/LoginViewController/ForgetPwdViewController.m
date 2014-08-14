@@ -115,9 +115,9 @@
 //    [httpClient setDefaultHeader:@"User-Agent" value:@"Mozilla/5.0 (iphone; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"];
     
     [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
-    
+    //employee
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         @"employee",@"pwd_type",
+                         @"customer",@"pwd_type",
                          nameTf.text,@"client.clientName",
                          emailTf.text,@"client.clientEmail"
                          ,nil];
