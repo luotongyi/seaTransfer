@@ -33,9 +33,9 @@
     self.title = @"注册";
     self.view.backgroundColor = HEXCOLOR(0x6981FE);
     
-    baseScrollview = [[UIScrollView alloc]initWithFrame:self.view.frame];
-    [self.view addSubview:baseScrollview];
-    baseScrollview.contentSize = CGSizeMake(320, 600);
+    //    baseScrollview = [[UIScrollView alloc]initWithFrame:self.view.frame];
+    //    [self.view addSubview:baseScrollview];
+    //    baseScrollview.contentSize = CGSizeMake(320, 600);
     
     //TODO:定制自己的风格的  左UIBarButtonItem
     UIButton* backButton= [UIButton buttonWithType:UIButtonTypeCustom];
@@ -53,104 +53,110 @@
     label = [[UILabel alloc]initWithFrame:CGRectMake(20, 20, 70, 20)];
     label.font = [UIFont systemFontOfSize:14];
     label.text = @"用 户 名:";
-    [baseScrollview addSubview:label];
+    [self.view addSubview:label];
     [label release];
     
     tf1 = [[UITextField alloc]initWithFrame:CGRectMake(100, 20, 150, 20)];
     tf1.delegate = self;
     tf1.placeholder = @"请输入用户名";
     tf1.text = @"";
+    tf1.adjustsFontSizeToFitWidth = YES;
     tf1.borderStyle = UITextBorderStyleNone;
     tf1.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf1.layer.borderWidth = 1.0f;
     tf1.backgroundColor = [UIColor whiteColor];
     tf1.tag = kInputTfTag;
-    [baseScrollview addSubview:tf1];
+    [self.view addSubview:tf1];
     
     label = [[UILabel alloc]initWithFrame:CGRectMake(20, 50, 70, 20)];
     label.font = [UIFont systemFontOfSize:14];
     label.text = @"登录密码:";
-    [baseScrollview addSubview:label];
+    [self.view addSubview:label];
     [label release];
     
     tf2 = [[UITextField alloc]initWithFrame:CGRectMake(100, 50, 150, 20)];
     tf2.placeholder = @"请输入密码";
     tf2.text = @"";
+    tf2.adjustsFontSizeToFitWidth = YES;
     tf2.delegate = self;
     tf2.borderStyle = UITextBorderStyleNone;
     tf2.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf2.layer.borderWidth = 1.0f;
     tf2.backgroundColor = [UIColor whiteColor];
     tf2.tag = kInputTfTag+1;
-    [baseScrollview addSubview:tf2];
+    [self.view addSubview:tf2];
     
     label = [[UILabel alloc]initWithFrame:CGRectMake(20, 80, 70, 20)];
     label.font = [UIFont systemFontOfSize:14];
     label.text = @"确认密码:";
-    [baseScrollview addSubview:label];
+    [self.view addSubview:label];
     [label release];
     
     tf3 = [[UITextField alloc]initWithFrame:CGRectMake(100, 80, 150, 20)];
     tf3.placeholder = @"请确认密码";
     tf3.text = @"";
+    tf3.adjustsFontSizeToFitWidth = YES;
     tf3.delegate = self;
     tf3.borderStyle = UITextBorderStyleNone;
     tf3.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf3.layer.borderWidth = 1.0f;
     tf3.backgroundColor = [UIColor whiteColor];
     tf3.tag = kInputTfTag+2;
-    [baseScrollview addSubview:tf3];
+    [self.view addSubview:tf3];
     
     label = [[UILabel alloc]initWithFrame:CGRectMake(20, 110, 70, 20)];
     label.font = [UIFont systemFontOfSize:14];
     label.text = @"手 机 号:";
-    [baseScrollview addSubview:label];
+    [self.view addSubview:label];
     [label release];
     
     tf4 = [[UITextField alloc]initWithFrame:CGRectMake(100, 110, 150, 20)];
     tf4.placeholder = @"请输入手机号";
     tf4.text = @"";
+    tf4.adjustsFontSizeToFitWidth = YES;
     tf4.delegate = self;
     tf4.borderStyle = UITextBorderStyleNone;
     tf4.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf4.layer.borderWidth = 1.0f;
     tf4.backgroundColor = [UIColor whiteColor];
     tf4.tag = kInputTfTag+3;
-    [baseScrollview addSubview:tf4];
+    [self.view addSubview:tf4];
     
     label = [[UILabel alloc]initWithFrame:CGRectMake(20, 140, 70, 20)];
     label.font = [UIFont systemFontOfSize:14];
     label.text = @"邮\t箱:";
-    [baseScrollview addSubview:label];
+    [self.view addSubview:label];
     [label release];
     
     tf5 = [[UITextField alloc]initWithFrame:CGRectMake(100, 140, 150, 20)];
     tf5.placeholder = @"请输入邮箱";
     tf5.text = @"";
+    tf5.adjustsFontSizeToFitWidth = YES;
     tf5.delegate = self;
     tf5.borderStyle = UITextBorderStyleNone;
     tf5.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf5.layer.borderWidth = 1.0f;
     tf5.backgroundColor = [UIColor whiteColor];
     tf5.tag = kInputTfTag+4;
-    [baseScrollview addSubview:tf5];
+    [self.view addSubview:tf5];
     
     label = [[UILabel alloc]initWithFrame:CGRectMake(20, 170, 70, 20)];
     label.font = [UIFont systemFontOfSize:14];
     label.text = @"公司名称:";
-    [baseScrollview addSubview:label];
+    [self.view addSubview:label];
     [label release];
     
     tf6 = [[UITextField alloc]initWithFrame:CGRectMake(100, 170, 150, 20)];
     tf6.placeholder = @"请输入公司名称";
     tf6.text = @"";
+    tf6.adjustsFontSizeToFitWidth = YES;
     tf6.delegate = self;
     tf6.borderStyle = UITextBorderStyleNone;
     tf6.layer.borderColor = HEXCOLOR(0xEBEBEB).CGColor;
     tf6.layer.borderWidth = 1.0f;
     tf6.backgroundColor = [UIColor whiteColor];
     tf6.tag = kInputTfTag+5;
-    [baseScrollview addSubview:tf6];
+    [self.view addSubview:tf6];
     
     UIButton *forgetPwdBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     forgetPwdBtn.frame = CGRectMake(20, 200, 260, 30);
@@ -161,7 +167,7 @@
     [forgetPwdBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [forgetPwdBtn setTitle:@"注  册" forState:UIControlStateNormal];
     [forgetPwdBtn addTarget:self action:@selector(registerInServer:) forControlEvents:UIControlEventTouchUpInside];
-    [baseScrollview addSubview:forgetPwdBtn];
+    [self.view addSubview:forgetPwdBtn];
     
 }
 
@@ -278,7 +284,7 @@
     }
     
     NSString *pwd,*pwd1;
-    for (UITextField *tf in [baseScrollview subviews])
+    for (UITextField *tf in [self.view subviews])
     {
         if (tf.tag == kInputTfTag+1)
         {
@@ -295,6 +301,16 @@
         return result;
     }
     return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -319,7 +335,7 @@
     [tf4 release];
     [tf5 release];
     [tf6 release];
-    [baseScrollview release];
+    //    [baseScrollview release];
     [super dealloc];
 }
 
