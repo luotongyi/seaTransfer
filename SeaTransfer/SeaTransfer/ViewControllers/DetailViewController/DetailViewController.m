@@ -33,7 +33,7 @@
 {
     for (int i = 2000; i<2016; i++) {
         UITextField *field = (UITextField *)[self.view viewWithTag:i];
-        if ([field.text length] == 0) {
+        if (field.tag != 2006 && [field.text length] == 0) {
             alertMessage(@"请检查输入信息的完整性。");
             return ;
         }
