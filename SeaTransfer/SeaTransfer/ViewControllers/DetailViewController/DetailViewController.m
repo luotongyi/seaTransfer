@@ -50,7 +50,10 @@
     NSString *str2 = [self.detailDic objectForKey:@"finishImg"];
     NSString *str3 = [self.detailDic objectForKey:@"img"];
     NSString *str4 = [self.detailDic objectForKey:@"loadImg"];
-    str4 = [str4 substringToIndex:[str4 length]-1];
+    if (str4.length > 0) {
+        str4 = [str4 substringToIndex:[str4 length]-1];
+    }
+    
     
     [string appendString:str1];
     [string appendString:str2];
