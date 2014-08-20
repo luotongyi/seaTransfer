@@ -50,14 +50,26 @@
     NSString *str2 = [self.detailDic objectForKey:@"finishImg"];
     NSString *str3 = [self.detailDic objectForKey:@"img"];
     NSString *str4 = [self.detailDic objectForKey:@"loadImg"];
-    if (str4.length > 0) {
-        str4 = [str4 substringToIndex:[str4 length]-1];
-    }
+//    if (str4.length > 0) {
+//        str4 = [str4 substringToIndex:[str4 length]-1];
+//    }
     
     
     [string appendString:str1];
+    if (![str1 isEqualToString:@""])
+    {
+        [string appendString:@","];
+    }
     [string appendString:str2];
+    if (![str2 isEqualToString:@""])
+    {
+        [string appendString:@","];
+    }
     [string appendString:str3];
+    if (![str3 isEqualToString:@""])
+    {
+        [string appendString:@","];
+    }
     [string appendString:str4];
     
     /*NSArray *array = [self.detailDic objectForKey:@"imgs"];

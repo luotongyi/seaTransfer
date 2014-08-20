@@ -57,12 +57,12 @@
                   symbolName = "-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]"
                   moduleName = "SeaTransfer"
                   urlString = "file://localhost/Users/zhangyukimatsu/Desktop/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-                  timestampString = "429762296.035482"
+                  timestampString = "430195701.940934"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "803"
                   endingLineNumber = "803"
-                  offsetFromSymbolStart = "484">
+                  offsetFromSymbolStart = "387">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -71,12 +71,12 @@
                   symbolName = "__80-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
                   moduleName = "SeaTransfer"
                   urlString = "file://localhost/Users/zhangyukimatsu/Desktop/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-                  timestampString = "429762296.035863"
+                  timestampString = "430195701.9413"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "803"
-                  endingLineNumber = "803"
-                  offsetFromSymbolStart = "0">
+                  startingLineNumber = "805"
+                  endingLineNumber = "805"
+                  offsetFromSymbolStart = "38">
                </Location>
             </Locations>
          </BreakpointContent>
