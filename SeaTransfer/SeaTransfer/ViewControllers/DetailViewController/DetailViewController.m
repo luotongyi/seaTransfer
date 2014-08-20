@@ -450,11 +450,11 @@
     scrolls.showsHorizontalScrollIndicator = NO;
     [scroll addSubview:scrolls];
     
-    NSInteger imgCount = [[self.detailDic objectForKey:@"img"] count];
+    NSInteger imgCount = [[self.detailDic objectForKey:@"imgArr"] count];
     
     for (int i = 0; i<imgCount; i++) {
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(75*i+2.5, 2.5, 70, 65)];
-        [imgView setImageWithURL:[NSURL URLWithString:[[[self.detailDic objectForKey:@"img"] objectAtIndex:i] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+        [imgView setImageWithURL:[NSURL URLWithString:[[[self.detailDic objectForKey:@"imgArr"] objectAtIndex:i] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
         [scrolls addSubview:imgView];
         [imgView release];
         
@@ -535,7 +535,7 @@
 -(void) seeBigPicture:(id)sender
 {
     NSLog(@"%d",[sender tag]);
-    NSArray *array = [self.detailDic objectForKey:@"img"];
+    NSArray *array = [self.detailDic objectForKey:@"imgArr"];
     NSString *url = [[array objectAtIndex:[sender tag]-1000] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     if (array.count == 0) {
         return;

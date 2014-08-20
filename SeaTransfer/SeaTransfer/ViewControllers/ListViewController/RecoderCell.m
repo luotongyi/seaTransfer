@@ -151,7 +151,7 @@
     [[self.bgView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     if ([dictionary objectForKey:@"img"]) {
-        NSArray *array = [dictionary objectForKey:@"img"];
+        NSArray *array = [dictionary objectForKey:@"imgArr"];
         for (int i = 0; i<array.count;i++) {
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(1+72*i, 1, 70, 70)];
             [imgView setImageWithURL:[NSURL URLWithString:[[array objectAtIndex:i] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];

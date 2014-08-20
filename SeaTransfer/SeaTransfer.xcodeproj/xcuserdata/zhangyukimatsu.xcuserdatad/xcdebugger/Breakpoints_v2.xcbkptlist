@@ -57,7 +57,7 @@
                   symbolName = "-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]"
                   moduleName = "SeaTransfer"
                   urlString = "file://localhost/Users/zhangyukimatsu/Desktop/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-                  timestampString = "430195701.940934"
+                  timestampString = "430196503.166733"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "803"
@@ -71,7 +71,7 @@
                   symbolName = "__80-[AddRecoderViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
                   moduleName = "SeaTransfer"
                   urlString = "file://localhost/Users/zhangyukimatsu/Desktop/seaTransfer/SeaTransfer/SeaTransfer/ViewControllers/AddRecoderViewController/AddRecoderViewController.m"
-                  timestampString = "430195701.9413"
+                  timestampString = "430196503.167072"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "805"
@@ -174,6 +174,22 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "-updateDetail:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeaTransfer/ViewControllers/ListViewController/ListViewController.m"
+            timestampString = "430196568.432603"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-checkData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

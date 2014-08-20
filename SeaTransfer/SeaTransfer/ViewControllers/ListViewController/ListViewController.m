@@ -159,7 +159,7 @@
 //                [array addObject:[NSString stringWithFormat:@"http://114.215.103.53/upload/%@/%@",[NSString stringWithFormat:@"%@ZX",[dic objectForKey:@"contractNo"]],url]];
                 [array addObject:[NSString stringWithFormat:@"http://114.215.103.53/upload/%@",url]];
             }
-            [dic setObject:array forKey:@"img"];
+            [dic setObject:array forKey:@"imgArr"];
         }
         [recodeArray addObject:dic];
         [searchArray addObject:dic];
@@ -414,7 +414,7 @@
             for (NSString *url in tmpArr) {
                 [array addObject:[NSString stringWithFormat:@"http://114.215.103.53/upload/%@/%@",[NSString stringWithFormat:@"%@ZX",[dic objectForKey:@"contractNo"]],url]];
             }
-            [dic setObject:array forKey:@"img"];
+            [dic setObject:array forKey:@"imgArr"];
         }
         
         [searchArray addObject:dic];
