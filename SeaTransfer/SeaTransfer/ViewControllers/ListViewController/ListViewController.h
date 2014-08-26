@@ -21,5 +21,7 @@
     BOOL isSearch;
     int currentPage;
     UIButton *searchBtn;
+    
+    NSMutableArray *searchArr;
 }
 @end

@@ -64,7 +64,7 @@
     [headerView addSubview:searchBtn];
     
     
-    
+    searchArr = [[NSMutableArray alloc]init];
     searchArray = [[NSMutableArray alloc] init];
     recodeArray = [[NSMutableArray alloc] init];
     index = 0;
@@ -136,6 +136,9 @@
     }
     
     for (NSMutableDictionary *dic in [info objectForKey:@"result"]) {
+        
+        [searchArr addObject:dic];
+        
         if ([dic objectForKey:@"img"]) {
             NSArray *tmpArr = [dic objectForKey:@"imgs"];
             NSArray *emptyArr = [dic objectForKey:@"emptyImgs"];

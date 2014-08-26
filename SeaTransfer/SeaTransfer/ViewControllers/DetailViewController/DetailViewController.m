@@ -39,23 +39,19 @@
         }
     }
     
-    NSString *userId = [[DataCenter shareInstance].userInfo  objectForKey:@"userId"];
+//    NSString *userId = [[DataCenter shareInstance].userInfo  objectForKey:@"userId"];
     NSString *vogId = [self.detailDic objectForKey:@"shipVoyageId"];
-    NSString *recoderUserId = [DataCenter shareInstance].userName;
+    NSString *recoderUserId = [self.detailDic objectForKey:@"recordUserId"];
     NSString *recordsId = [self.detailDic objectForKey:@"id"];
     
-    NSMutableString *string =  [[NSMutableString alloc] init];
+//    NSMutableString *string =  [[NSMutableString alloc] init];
     
     NSString *str1 = [self.detailDic objectForKey:@"emptyImg"];
     NSString *str2 = [self.detailDic objectForKey:@"finishImg"];
     NSString *str3 = [self.detailDic objectForKey:@"img"];
     NSString *str4 = [self.detailDic objectForKey:@"loadImg"];
-//    if (str4.length > 0) {
-//        str4 = [str4 substringToIndex:[str4 length]-1];
-//    }
     
-    
-    [string appendString:str1];
+    /*[string appendString:str1];
     if (![str1 isEqualToString:@""])
     {
         [string appendString:@","];
@@ -70,7 +66,7 @@
     {
         [string appendString:@","];
     }
-    [string appendString:str4];
+    [string appendString:str4];*/
     
     /*NSArray *array = [self.detailDic objectForKey:@"imgs"];
     
@@ -100,7 +96,10 @@
                          warehouseCapacity.text,@"handlingRecords.releaseNum",
                          !recoderUserId ? @"" : recoderUserId,@"handlingRecords.recordUserId",
                          remark.text,@"handlingRecords.remark",
-                         !string ? @"" : string , @"handlingRecords.img",
+                         !str1 ? @"" : str1 , @"handlingRecords.emptyImg",
+                         !str2 ? @"" : str2 , @"handlingRecords.finishImg",
+                         !str3 ? @"" : str3 , @"handlingRecords.img",
+                         !str4 ? @"" : str4 , @"handlingRecords.loadImg",
                          timeStart.text , @"handlingRecords.workBeg",
                          timeEnd.text , @"handlingRecords.workEnd",nil];
     
@@ -512,8 +511,8 @@
     planCount.text = [NSString stringWithFormat:@"%@",[self.detailDic objectForKey:@"cargoNum"]];
     actualCount.text = [NSString stringWithFormat:@"%@",[self.detailDic objectForKey:@"realNum"]];
     warehouseCapacity.text = [NSString stringWithFormat:@"%@",[self.detailDic objectForKey:@"releaseNum"]];
-//    outworker.text = [self.detailDic objectForKey:@"recordUserId"];
-    outworker.text = [DataCenter shareInstance].userName;
+    outworker.text = [self.detailDic objectForKey:@"recordUserId"];
+//    outworker.text = [DataCenter shareInstance].userName;
     remark.text = [self.detailDic objectForKey:@"remark"];
     timeStart.text = [self.detailDic objectForKey:@"workBeg"];
     timeEnd.text = [self.detailDic objectForKey:@"workEnd"];
